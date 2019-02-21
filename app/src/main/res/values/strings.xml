@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">SmilesDaBarber</string>
+    <string name="btnRegisterlbl">Register</string>
+    <string name="btnLoginlbl">Login</string>
+    <string name="emailHint">Enter Email</string>
+    <string name="passwordHint">Enter Password</string>
+    <string name="hintEnterName">Enter Name</string>
+    <string name="HintClientPhoneNumber">Enter Phone Number</string>
+    <string name="title_activity_client_home">ClientHome</string>
+    <string name="btnlblrequestAppointment">Request Appointment</string>
+    <string name="btnlblContactSmiles">Contact Smiles</string>
+    <string name="btnlblViewStyles"> Styles / Prices</string>
+    <string name="txtLblSelectStyle">Available Styles </string>
+    <string name="AppointmentInfolbl">Apointments Currently can only Be Schedueled in the Current week Mon-Fri </string>
+    <string name="checkboxBeardlbl">Beard Shape Up</string>
+    <string name="btnMakeAppointlbl">Make Appointment</string>
+
+    <string-array name="appointment_Days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wenesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+
+    <string-array name="Style">
+        <item>Brush Cut</item>
+        <item>Fade</item>
+        <item>Shape Up</item>
+        <item>Tappered Fro</item>
+
+    </string-array>
+</resources>

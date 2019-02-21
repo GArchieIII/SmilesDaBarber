@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "50804191763",
+    "firebase_url": "https://smilesdabarber.firebaseio.com",
+    "project_id": "smilesdabarber",
+    "storage_bucket": "smilesdabarber.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50804191763:android:21cd41804ca23ad6",
+        "android_client_info": {
+          "package_name": "busterarchie.com.smilesdabarber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50804191763-p6apvflo8k4r8a143k6762iro6m8v8i1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "busterarchie.com.smilesdabarber",
+            "certificate_hash": "74e2833d496da232b80dc9a7bbd56f9e44c1d839"
+          }
+        },
+        {
+          "client_id": "50804191763-82j5phv3halpds89pk2obck8thgr24ke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR52nCx9__oGTnl0dCuJQBB1RzbEEvlNw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50804191763-82j5phv3halpds89pk2obck8thgr24ke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
