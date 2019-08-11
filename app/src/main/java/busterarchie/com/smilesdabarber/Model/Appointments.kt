@@ -5,19 +5,20 @@ package busterarchie.com.smilesdabarber.Model
  */
 class Appointments {
 
+
     var clientId:String = ""
-    var appointTime:String = ""
-    var appointDate:String = ""
     var Style:String = ""
+    var AcontactNumber:String = ""
 
 
-    constructor(clientId:String,appointtime:String,appointDate:String,Style:String){
+    constructor(clientId:String,Style:String,AcontactNumber:String){
 
         this.clientId=clientId
-        this.appointTime=appointTime
-        this.appointDate=appointDate
         this.Style=Style
+        this.AcontactNumber
 
     }
+
+    constructor()
 
 }

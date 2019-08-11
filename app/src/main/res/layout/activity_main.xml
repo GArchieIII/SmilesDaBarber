@@ -4,59 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="busterarchie.com.smilesdabarber.MainActivity"
+    android:background="@drawable/main_bg"
+    tools:context="busterarchie.com.smilesdabarber.Activities.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="235dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="108dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/smileslogopng" />
 
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/custusername"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
         android:ems="10"
         android:hint="@string/emailHint"
         android:inputType="textEmailAddress"
+        android:textColor="#ffff"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custpassword"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
         android:ems="10"
         android:hint="@string/passwordHint"
         android:inputType="textPassword"
+        android:textColor="#ffff"
         app:layout_constraintStart_toStartOf="@+id/edtEmail"
         app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="107dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/input_fields"
         android:text="@string/btnLoginlbl"
+        android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnNewRegister"
-        android:layout_width="wrap_content"
+        android:id="@+id/NewReg"
+        android:layout_width="109dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
-        android:layout_marginEnd="54dp"
-        android:text="Button"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/input_fields"
+        android:text="New Client"
+        android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

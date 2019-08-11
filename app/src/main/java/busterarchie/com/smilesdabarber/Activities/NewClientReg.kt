@@ -1,40 +1,39 @@
-package busterarchie.com.smilesdabarber
+package busterarchie.com.smilesdabarber.Activities
 
 import android.content.Intent
-import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import busterarchie.com.smilesdabarber.Model.Client
+import busterarchie.com.smilesdabarber.R
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_register_client.*
+import kotlinx.android.synthetic.main.activity_new_client_reg.*
 
-class RegisterClient : AppCompatActivity() {
+class NewClientReg : AppCompatActivity() {
 
+    private var currentUser:FirebaseUser?=null
     var mAuth:FirebaseAuth?=null
-    private var currentUser:FirebaseUser?= null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_client)
-
-
+        setContentView(R.layout.activity_new_client_reg)
 
         var register = btnRegisterNewClient
 
-        var database=FirebaseDatabase.getInstance()
+        var database= FirebaseDatabase.getInstance()
         var myref = database.getReference("Clients").push()
 
 
 
         register.setOnClickListener {
 
-            var mAuth:FirebaseAuth=FirebaseAuth.getInstance()
+            var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
             var clientName = edtClientName.text.toString()
             var clientNumber = edtClientNumber.text.toString()
@@ -54,7 +53,7 @@ class RegisterClient : AppCompatActivity() {
                         if (task.isSuccessful) {
                             var user: FirebaseUser = mAuth!!.currentUser!!
                             Log.d("User", user.email.toString())
-                            var intent= Intent(this,ClientHome::class.java)
+                            var intent= Intent(this, ClientHome::class.java)
                             intent.putExtra("UserName",clientName)
                             startActivity(intent)
                         } else {
@@ -72,17 +71,20 @@ class RegisterClient : AppCompatActivity() {
 
         super.onStart()
 
-       // currentUser = mAuth!!.currentUser
+        // currentUser = mAuth!!.currentUser
+
+        currentUser=null
 
 
         if(currentUser!=null){
 
-            var intent= Intent(this,ClientHome::class.java)
+
+            var intent= Intent(this, ClientHome::class.java)
             startActivity(intent)
-            Toast.makeText(this,"User Is Logged IN ",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"User Is Logged IN ", Toast.LENGTH_SHORT).show()
         }else{
-            var intent=Intent(this,AppointmentScheduler::class.java)
-            startActivity(intent)
+           /* var intent= Intent(this,AppointmentScheduler::class.java)
+            startActivity(intent)*/
 
         }
 
@@ -93,3 +95,5 @@ class RegisterClient : AppCompatActivity() {
 
     }
 }
+
+

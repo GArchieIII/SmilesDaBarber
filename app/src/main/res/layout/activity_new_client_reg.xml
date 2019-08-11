@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="busterarchie.com.smilesdabarber.RegisterClient">
+    android:background="@drawable/main_bg"
+    tools:context=".Activities.NewClientReg">
+
 
     <EditText
         android:id="@+id/edtClientName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/custusername"
         android:ems="10"
         android:hint="@string/hintEnterName"
         android:inputType="textPersonName"
@@ -21,8 +24,9 @@
     <EditText
         android:id="@+id/edtClientNumber"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="53dp"
         android:layout_marginTop="27dp"
+        android:background="@drawable/custusername"
         android:ems="10"
         android:hint="@string/HintClientPhoneNumber"
         android:inputType="textPersonName"
@@ -32,8 +36,9 @@
     <EditText
         android:id="@+id/edtClientEmail"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/custusername"
         android:ems="10"
         android:hint="@string/emailHint"
         android:inputType="textPersonName"
@@ -42,23 +47,27 @@
 
     <Button
         android:id="@+id/btnRegisterNewClient"
-        android:layout_width="wrap_content"
+        android:layout_width="128dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/input_fields"
         android:text="@string/btnRegisterlbl"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtClientPassword" />
 
     <EditText
         android:id="@+id/edtClientPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="217dp"
+        android:layout_height="57dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/custusername"
         android:ems="10"
         android:hint="@string/passwordHint"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/edtClientEmail"
         app:layout_constraintTop_toBottomOf="@+id/edtClientEmail" />
+
 </android.support.constraint.ConstraintLayout>

@@ -10,10 +10,17 @@
     <string name="btnlblrequestAppointment">Request Appointment</string>
     <string name="btnlblContactSmiles">Contact Smiles</string>
     <string name="btnlblViewStyles"> Styles / Prices</string>
-    <string name="txtLblSelectStyle">Available Styles </string>
-    <string name="AppointmentInfolbl">Apointments Currently can only Be Schedueled in the Current week Mon-Fri </string>
+    <string name="txtLblSelectStyle">Select Style </string>
+    <string name="AppointmentInfolbl">All appointments are on a first come first serve basis </string>
     <string name="checkboxBeardlbl">Beard Shape Up</string>
     <string name="btnMakeAppointlbl">Make Appointment</string>
+    <string name="notify_clients">Notify Clients</string>
+    <string name="Cuts">Todays cuts</string>
+    <string name="clientnotificationprompt">Enter Notification</string>
+    <string name="notifyindividualprompt">Notify Selected Client</string>
+    <string name="todays_cuts">Todays Cuts</string>
+    <string name="cut_clientbtn">Cut</string>
+    <string name="cancel_cutbtn">Cancel Cut</string>
 
     <string-array name="appointment_Days">
         <item>Monday</item>
@@ -33,4 +40,18 @@
         <item>Tappered Fro</item>
 
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ClientNamePrompt">Enter Client Name</string>
+    <string name="hair_cut">Hair Cut</string>
+    <string name="kids_cut">Kids Cut</string>
+    <string name="college_cut">College Cut</string>
+    <string name="line_up_trim_non_mobile_only">Line Up/Trim(Non mobile only)</string>
+    <string name="razor_line">Razor Line</string>
+    <string name="salisbury_nc_mobile_cut">Salisbury(NC) Mobile Cut</string>
+    <string name="_15_20_mile_radius_mobile_cut">15-20 Mile(Radius)Mobile Cut</string>
+    <string name="_25_40_mile_radius_mobile_cut">25-40 Mile(Radius)Mobile Cut</string>
+    <string name="_45_55_mile_radius_mobile_cut">45-55 Mile(Radius)Mobile Cut</string>
+    <string name="textview">TextView</string>
 </resources>
