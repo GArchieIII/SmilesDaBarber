@@ -1,5 +1,6 @@
 package busterarchie.com.smilesdabarber.Activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -7,6 +8,7 @@ import android.support.v7.widget.RecyclerView
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.Toast
 import busterarchie.com.smilesdabarber.Data.Styles
 import busterarchie.com.smilesdabarber.Model.Appointments
 import busterarchie.com.smilesdabarber.Adapters.CutListAdapter
@@ -77,10 +79,12 @@ class AppointmentScheduler : AppCompatActivity() {
                 }
             }
 
-            println(YClientNumber)
 
-            var myappointment = Appointments(mClientName, YClientNumber,selectedStyle )
+            var myappointment = Appointments(mClientName,selectedStyle,edtCContact.text.toString())
             apointmentRef.setValue(myappointment)
+            Toast.makeText(this,"You appointment Request has been made",Toast.LENGTH_LONG).show()
+            intent= Intent(this,ClientHome::class.java)
+            startActivity(intent)
         }
     }
 

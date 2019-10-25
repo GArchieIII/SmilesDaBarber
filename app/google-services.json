@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "50804191763-ah8lhk98s3ut58gc1knclvp0vqi65pb7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "busterarchie.com.smilesdabarber",
+            "certificate_hash": "4f9fd12ce71e2b4e454392ac93064f83e06cfb36"
+          }
+        },
+        {
           "client_id": "50804191763-p6apvflo8k4r8a143k6762iro6m8v8i1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -33,20 +41,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "50804191763-82j5phv3halpds89pk2obck8thgr24ke.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

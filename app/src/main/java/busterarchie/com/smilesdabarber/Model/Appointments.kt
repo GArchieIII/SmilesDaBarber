@@ -8,14 +8,14 @@ class Appointments {
 
     var clientId:String = ""
     var Style:String = ""
-    var AcontactNumber:String = ""
+    var contactNumber:String = ""
 
 
-    constructor(clientId:String,Style:String,AcontactNumber:String){
+    constructor(clientId:String,Style:String,contactNumber:String){
 
         this.clientId=clientId
         this.Style=Style
-        this.AcontactNumber
+        this.contactNumber=contactNumber
 
     }
 

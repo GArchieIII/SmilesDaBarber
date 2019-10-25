@@ -202,7 +202,7 @@
         android:background="@drawable/custpassword"
         android:ems="10"
         android:hint="@string/HintClientPhoneNumber"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|phone"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"

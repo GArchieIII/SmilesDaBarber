@@ -2,7 +2,10 @@ package busterarchie.com.smilesdabarber.Adapters
 
 
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
+import android.content.Intent
 import android.support.v7.view.menu.MenuView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -12,10 +15,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import busterarchie.com.smilesdabarber.Data.Styles
+import busterarchie.com.smilesdabarber.Fragments.TodaysCutsFragment
 import busterarchie.com.smilesdabarber.Model.Appointments
 import busterarchie.com.smilesdabarber.R
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import java.security.AccessController.getContext
 
 class CutListAdapter(databaseQuery:DatabaseReference,var context:Context):FirebaseRecyclerAdapter<Appointments,CutListAdapter.ViewHolder>(
 
@@ -28,6 +34,42 @@ class CutListAdapter(databaseQuery:DatabaseReference,var context:Context):Fireba
     override fun populateViewHolder(viewHolder: CutListAdapter.ViewHolder?, model: Appointments?, position: Int) {
             var userId=getRef(position).key
             viewHolder!!.BindView(model!!,context)
+
+
+            viewHolder.itemView.setOnClickListener {
+
+
+
+                var selection= arrayOf("Client Serviced","Client Cancled")
+
+                val dialoge= AlertDialog.Builder(context)
+
+                dialoge.setTitle("Handle Cut")
+                dialoge.setIcon(R.drawable.smileslogopng)
+                dialoge.setItems(selection,DialogInterface.OnClickListener{DialogInterface,i->
+
+                    if(i==0){
+                        var dataref=FirebaseDatabase.getInstance().getReference("Appointments").child(userId).setValue(null)
+
+                    }else if(i==1){
+
+                        var intent= Intent(context,TodaysCutsFragment::class.java)
+                        context.startActivity(intent)
+
+                }
+
+
+                })
+                dialoge.show()
+
+
+
+
+
+
+
+                
+            }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CutListAdapter.ViewHolder {
@@ -58,11 +100,11 @@ class CutListAdapter(databaseQuery:DatabaseReference,var context:Context):Fireba
             //setting up strings to pass intent
             clientNameTxt = myappoint.clientId
             clientCutTxt=myappoint.Style
-            contactInfoTxt=myappoint.AcontactNumber
+            contactInfoTxt=myappoint.contactNumber
 
             clientName.text=myappoint.clientId
             clientCut.text=myappoint.Style
-            contactInfo.text=myappoint.AcontactNumber
+            contactInfo.text=myappoint.contactNumber
 
 
         }

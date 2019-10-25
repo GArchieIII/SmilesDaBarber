@@ -33,7 +33,7 @@ class NewClientReg : AppCompatActivity() {
 
         register.setOnClickListener {
 
-            var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+            mAuth = FirebaseAuth.getInstance()
 
             var clientName = edtClientName.text.toString()
             var clientNumber = edtClientNumber.text.toString()
@@ -67,33 +67,7 @@ class NewClientReg : AppCompatActivity() {
 
         }
     }
-    override fun onStart(){
 
-        super.onStart()
-
-        // currentUser = mAuth!!.currentUser
-
-        currentUser=null
-
-
-        if(currentUser!=null){
-
-
-            var intent= Intent(this, ClientHome::class.java)
-            startActivity(intent)
-            Toast.makeText(this,"User Is Logged IN ", Toast.LENGTH_SHORT).show()
-        }else{
-           /* var intent= Intent(this,AppointmentScheduler::class.java)
-            startActivity(intent)*/
-
-        }
-
-        //call a function to update Ui
-
-
-
-
-    }
 }
 
 

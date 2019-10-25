@@ -5,11 +5,12 @@ package busterarchie.com.smilesdabarber.Model
  */
 class Client {
 
-    var clientUID:String=""
+    private var clientUID:String=""
     var clientName:String=""
     var clientPhone:String=""
     var clientEmail:String=""
     var clientPassword:String = ""
+     var clientPhotoUrl:String=""
 
     constructor(clientName:String,clientPhone:String,clientEmail:String,clientPassword:String){
 
@@ -22,6 +23,13 @@ class Client {
     }
 
     constructor()
+
+    fun GetClientName():String{
+
+        return clientName
+
+
+    }
 
 
 

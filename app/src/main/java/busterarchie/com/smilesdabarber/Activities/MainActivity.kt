@@ -10,6 +10,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.firebase.iid.FirebaseInstanceIdService
@@ -19,15 +20,19 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    var firebaseDatabase = FirebaseDatabase.getInstance()
+    var databaseref = firebaseDatabase.getReference("Clients").push()
+    //var firebaseUser:FirebaseUser?=null
+    var mAuth = FirebaseAuth.getInstance()
+    //var userId=firebaseUser!!.uid
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
 
-        var firebaseDatabase = FirebaseDatabase.getInstance()
-        var databaseref = firebaseDatabase.getReference("Clients").push()
-        var mAuth = FirebaseAuth.getInstance()
+
 
 
         NewReg.setOnClickListener{
@@ -57,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                             if (task.isSuccessful) {
 
                                 Toast.makeText(this, "Login successful", Toast.LENGTH_LONG).show()
-                                var intent = Intent(this, ClientHome::class.java)
+                                var intent = Intent(this,SmilesAdmin::class.java)
                                 startActivity(intent)
 
 
